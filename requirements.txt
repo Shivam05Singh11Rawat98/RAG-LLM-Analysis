@@ -1,0 +1,8 @@
+langchain
+langchain_pinecone
+langchain_community
+pinecone
+sentence-transformers
+pypdf
+faiss-cpu
+ollama
