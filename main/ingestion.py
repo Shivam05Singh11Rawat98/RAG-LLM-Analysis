@@ -15,7 +15,7 @@ load_dotenv()
 embeddings = SentenceTransformerEmbeddings(model_name='all-mpnet-base-v2')
 
 pc = Pinecone(api_key=os.environ.get("PINECONE_API_KEY"))
-
+print(os.environ.get("PINECONE_API_KEY"))
 ## Pinecone code:
 index_name = "text-mining"
 

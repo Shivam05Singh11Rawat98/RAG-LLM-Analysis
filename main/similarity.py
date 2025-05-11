@@ -1,7 +1,7 @@
 from sentence_transformers import SentenceTransformer, util
 import pandas as pd
 
-df = pd.read_csv('updated_query_df.csv')
+df = pd.read_csv('dataFiles/merged_dataframes.csv')
 
 df.columns
 
@@ -26,7 +26,7 @@ df['llama_similarity'] = process_models('llama_response')
 df['gemma_similarity'] = process_models('gemma_response')
 df['mistral_similarity'] = process_models('mistral_response')
 df['deepseek_similarity'] = process_models('deepseek_response')
-#df['gpt_response'] = gpt_response
+df['gpt_similarity'] = process_models('gpt_response')
 
 
 df.to_csv('similarity.csv', index=False)
@@ -34,5 +34,5 @@ df.to_csv('similarity.csv', index=False)
 
 similar_df = pd.read_csv('similarity.csv')
 
-print(similar_df['llama_similarity'].head())
+similar_df['llama_similarity'].head()
 

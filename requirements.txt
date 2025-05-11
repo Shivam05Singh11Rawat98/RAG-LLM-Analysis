@@ -7,3 +7,9 @@ pypdf
 faiss-cpu
 ollama
 pandas
+nltk
+rouge-score
+langchain_openai
+matplotlib
+sacrebleu
+evaluate
