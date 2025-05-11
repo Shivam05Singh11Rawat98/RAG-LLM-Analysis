@@ -1,5 +1,5 @@
 # RAG-LLM-Analysis
-RAG on US Budget Documents
+**RAG on US Budget Documents**
 
 This study investigates how effectively Large Language Models (LLMs) can retrieve and interpret information from complex U.S. federal budget documents to improve transparency and accessibility in public finance. A Retrieval-Augmented Generation (RAG) approach is employed, utilizing SentenceTransformer embeddings and the Pinecone vector database for semantic, query-based retrieval. Five LLMs—LLaMA 3.2B, Mistral 7B, GPT-3.5-turbo 20B, Gemma2 2B, and DeepSeek-R1 1.5B—are evaluated on 50 curated queries covering fiscal years 2023 to 2025. Their responses are compared to manually crafted reference answers using evaluation metrics such as BLEU, ROUGE-1/2/L, METEOR, TER, BERTScore, and semantic similarity. Among the models, LLaMA 3.2B delivered the best overall results, with a BLEU score of 0.2403, ROUGE-L of 0.4550, METEOR of 0.5545, and the lowest TER. GPT-3.5-turbo performed closely behind, scoring 0.2091 on BLEU and 0.4938 on METEOR. DeepSeek-R1, the smallest model, had the weakest results, including a BLEU score of 0.0164 and a TER of 91.6. These findings highlight the superior ability of larger models, especially when combined with robust retrieval systems, to produce accurate and coherent responses to complex, domain-specific financial queries.
 
@@ -15,7 +15,7 @@ This study investigates how effectively Large Language Models (LLMs) can retriev
 
 ![image](https://github.com/user-attachments/assets/af080955-d624-464a-ba99-5b1c5c8e12c8)
 
-Model Parameters and Evaluation Results
+**Model Parameters and Evaluation Results**
 This study assesses the performance of five Large Language Models (LLMs) in responding to budget-related queries within a retrieval-augmented generation (RAG) framework. The models evaluated include LLaMA 3.2B, Mistral 7B, Gemma2 2B, DeepSeek-R1 1.5B, and GPT-3.5-turbo 20B. Each model was tested on 50 carefully curated questions designed to cover a broad range of topics in U.S. government finance, such as expenditure distribution, policy programs, and agency-level investments.
 
 For every query, a reference response was manually generated based on official budget documents, serving as a benchmark for evaluating the model-generated answers. The RAG setup retrieved the top-5 semantically relevant text chunks from a Pinecone vector database, which were then supplied to the LLMs for context-aware response generation.
@@ -33,7 +33,7 @@ DeepSeek-R1, being the smallest model, showed the weakest results, scoring the l
 Overall, the findings indicate that larger models like LLaMA 3.2B and GPT-3.5-turbo are more capable in tasks that demand detailed understanding of complex financial texts. In contrast, smaller models may require additional fine-tuning or targeted pretraining to be effective in such specialized domains.
 
 
-Recommendations and Future Directions
+**Recommendations and Future Directions:**
 This analysis underscores the importance of adopting more advanced evaluation approaches that account for both semantic understanding and contextual relevance. Relying solely on surface-level metrics such as ROUGE or BLEU can overlook responses that are semantically accurate but lexically varied. Integrating human evaluations or expert feedback will be crucial for achieving more precise and meaningful assessments in future studies.
 
 The comparatively lower performance of DeepSeek-R1 also indicates that models with smaller parameter sizes may face challenges in handling domain-specific content like government budgeting. Future efforts should consider leveraging larger models or fine-tuning smaller ones on targeted public finance datasets to enhance domain adaptability.
